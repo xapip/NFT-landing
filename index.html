@@ -3,14 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
   <link rel="stylesheet" href="style/style.css">
   <title>ZEUS UI</title>
 </head>
 <body>
   <header>
-
-
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="header">
+        <a class="logo" href="#">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-logo-shadow">
+            <defs>
+              <filter id="shadow" class="shadow">
+                <feDropShadow dx="-1" dy="2" stdDeviation="3" flood-color="#ffd700" />
+              </filter>
+            </defs>
+            <path d="M27.9407 0L0 23.1397H18.8661L11.3177 39.9763L39.5053 16.9908H19.8558L27.9407 0Z" fill="#3182CE" filter="url(#shadow)"/>
+            <path d="M27.9407 0L15.3199 18.6819L34.0727 18.6819L11.3177 39.9763L39.5053 16.9908L19.8558 16.9908L27.9407 0Z" fill="#2B6CB0"/>
+            <path d="M27.9407 0L0 23.1397H18.8661L11.3177 39.9763L23.308 21.4486H5.57848L27.9407 0Z" fill="#4299E1"/>
+            </svg>
+          <img class="logo__text" src="img/ZEUS UI.png" alt="ZEUS UI">
+        </a>
+        <ul class="menu">
+          <li>
+            <ul class="menu__inner">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">University</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Courses</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="menu__inner">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Use cases</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link link_drop-down-list">Plans</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Resources</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
+  
+  
+  <script src="script.js"></script>
 </body>
 </html>

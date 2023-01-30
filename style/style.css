@@ -1,0 +1,117 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: content-box;
+  padding: 0 15px;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #532C59;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+/* container */
+.container {
+  margin: 0 55px;
+}
+
+/* header */
+.header {
+  padding: 28px 0;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  display: flex;
+  align-items: center;
+}
+
+/* подсветка логотипа при наведении */
+.svg-logo-shadow defs feDropShadow {
+  flood-color: transparent;
+  transition: all .3s;
+}
+.logo:hover feDropShadow {
+  flood-color: #ffd700;
+}
+
+
+.logo__text {
+  margin-left: 5px;
+  width: 105px;
+  height: 15px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__inner {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item:not(:last-of-type) {
+  margin-right: 6px;
+}
+
+.menu__link {
+  padding: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000000;
+  opacity: .5;
+  transition: all .2s linear;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.link_drop-down-list {
+  position: relative;
+  margin-right: 10px;
+}
+
+.link_drop-down-list::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: -4px;
+  top: 17px;
+  width: 5px;
+  height: 5px;
+  border-bottom: 2px solid #4B5567;
+  border-right: 2px solid #4B5567;
+  transform: rotate(45deg);
+}
