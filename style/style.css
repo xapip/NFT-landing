@@ -131,6 +131,20 @@ a {
 }
 
 /* main */
+.title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #000000;
+  text-transform: capitalize;
+}
+
+.paragraph {
+  max-width: 760px;
+  margin: 24px auto;
+}
+
 /* section hero */
 .hero {
   position: relative;
@@ -153,16 +167,13 @@ a {
 }
 
 .hero__title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
   font-size: 80px;
   line-height: 96px;
-  color: #000000;
   text-shadow: -5px 5px 0 #FFFFFF;
+  text-transform: none;
 }
 
-.hero__text {
-  max-width: 760px;
+.hero__subtitle {
   margin: 32px auto;
 }
 
@@ -174,10 +185,111 @@ a {
   border: none;
   outline: none;
   font-family: 'Syne', sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   cursor: pointer;
+}
+
+/* section logos */
+.logos {
+  padding: 40px 0;
+  opacity: 0.8;
+}
+
+.logos__inner {
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logos__inner img:not(:last-of-type) {
+  margin-right: 40px;
+}
+
+/* section OurTeam */
+.team {
+  padding: 80px 0;
+}
+
+.team__subtitle {
+  margin-bottom: 80px;
+}
+
+.team__card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.team__card-item {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.team__card-item img {
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto 12px;
+}
+
+.card-item__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 12px;
+}
+
+.card-item__prof {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* section Hottest Collectionsl */
+.collections {
+  padding: 80px 0;
+}
+
+.collections__subtitle {
+  margin: 16px auto 64px;
+}
+
+.collections__card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px 32px;
+  align-items: flex-start;
+}
+
+.collections__card-item {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 412px;
+}
+
+.collections__card-item .wrapper-image {
+  box-shadow: inset 15px -15px 0px rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+  border-radius: 30px;
+}
+
+.collections__card-item .wrapper-image img {
+  border-radius: 30px;
+  position: relative;
+  z-index: -1;
+}
+
+.collections__card-item .card-item__title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+  text-transform: none;
+}
+
+.card-item__description {
+  font-size: 14px;
+  line-height: 20px;
 }
