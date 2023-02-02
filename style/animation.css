@@ -1,0 +1,84 @@
+.hero_bg-shapes {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.semicircle {
+  background-image: url('../img/hero/Background_semicircle.png');
+  background-position: left 50px top 5px;
+  animation: semicircle 4s linear infinite;
+}
+
+@keyframes semicircle {
+  from{
+    background-position: left 50px top 5px;
+  }
+  50%, 55%{
+    background-position: left 50px top 30px;
+  }
+  95%, to{
+    background-position: left 50px top 5px;
+  }
+}
+
+.cone {
+  background-image: url('../img/hero/Background_cone-blur.png');
+  background-position: right 150px top 45px;
+  animation: cone 3s linear infinite;
+}
+
+@keyframes cone {
+  from{
+    background-position: right 150px top 45px;
+  }
+  50%, 55%{
+    background-position: right 150px top 35px;
+  }
+  95%, to{
+    background-position: right 150px top 45px;
+  }
+}
+
+.spring {
+  background-image: url('../img/hero/Background_spring-blur.png');
+  background-position: left 0px bottom -35px;
+  animation: spring 3.5s linear infinite;
+}
+
+@keyframes spring {
+  from{
+    background-position: left 0px bottom -35px;
+  }
+  50%, 55%{
+    background-position: left 0px bottom -25px;
+  }
+  95%, to{
+    background-position: left 0px bottom -35px;
+  }
+}
+
+.crystal {
+  background-image: url('../img/hero/Background_crystal.png');
+  background-position: right 31px bottom -20px;
+  animation: crystal 4.5s linear infinite;
+}
+
+@keyframes crystal {
+  from{
+    background-position: right 31px  bottom -20px;
+  }
+  50%, 55%{
+    background-position: right 31px  bottom 5px;
+  }
+  95%, to{
+    background-position: right 31px  bottom -20px;
+  }
+}
