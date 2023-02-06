@@ -359,17 +359,24 @@ a {
   margin-bottom: 80px;
 }
 
-.testimonials__wrapper {
+.testimonials__viewport {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 412px);
+  grid-template-columns: repeat(3, 412px);
   column-gap: 23px;
-  max-height: 800px;
+  height: 720px;
   overflow: hidden;
+  border: 1px solid;
+  position: relative;
+}
+
+.testimonials__wrapper {
+  position: relative;
 }
 
 .card {
   padding: 24px;
-  max-width: 412px;
+  /* margin-bottom: 25px; */
+  width: 412px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -377,10 +384,8 @@ a {
   background-color: #f9f5ff;
   border: 1px solid #D6BCFA;
   border-radius: 10px;
-}
-
-.card:not(:last-of-type) {
-  margin-bottom: 25px;
+  position: absolute;
+  transition: top 3.5s linear;
 }
 
 .card__profile {
