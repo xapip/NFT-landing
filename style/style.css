@@ -365,8 +365,6 @@ a {
   column-gap: 23px;
   height: 720px;
   overflow: hidden;
-  border: 1px solid;
-  position: relative;
 }
 
 .testimonials__wrapper {
@@ -375,7 +373,7 @@ a {
 
 .card {
   padding: 24px;
-  /* margin-bottom: 25px; */
+  margin-bottom: 25px;
   width: 412px;
   display: flex;
   flex-direction: column;
@@ -385,7 +383,6 @@ a {
   border: 1px solid #D6BCFA;
   border-radius: 10px;
   position: absolute;
-  transition: top 3.5s linear;
 }
 
 .card__profile {
