@@ -8,7 +8,7 @@ for (const item of items) {
   item.addEventListener('click', () => {
     if(itemAnswer.style.maxHeight == '0px') {
       item.style.borderWidth = '2px';
-      item.style.backgroundColor = '#f8f4ff';
+      item.style.backgroundColor = '#FCFAFF';
       itemAnswer.style.maxHeight = itemAnswer.scrollHeight + 12 + 'px';
       itemAnswer.style.paddingTop = '12px';
     } else {

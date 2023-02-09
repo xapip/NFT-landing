@@ -47,15 +47,14 @@ a {
 }
 
 /* header */
-.header__wrapper {
+.header {
   background-color: #ffffff;
   border-bottom: 1px solid rgba(227, 108, 230, .4);
   box-shadow: 0 1px 2px rgba(227, 108, 230, .3);
 }
 
-.header__inner {
+.header__menu {
   padding: 26px 0;
-  position: relative;
 }
 
 .header_bottom-border {
@@ -64,12 +63,21 @@ a {
   box-shadow: 0 1px 2px rgba(227, 108, 230, .3);
 }
 
+/* общие стили для логотипа в header и footer */
 .logo {
   position: absolute;
   left: 45%;
-  top: 25%;
   display: flex;
   align-items: center;
+}
+
+.logo__text {
+  margin-left: 5px;
+}
+
+/* стили для логотипа в header */
+.header__logo {
+  top: 25%;
 }
 
 /* подсветка логотипа при наведении */
@@ -82,26 +90,27 @@ a {
 }
 
 
-.logo__text {
-  margin-left: 5px;
+/* общие стили для меню header и footer */
+.menu {
+  position: relative;
 }
 
-.menu {
+.menu-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu__inner {
+.menu-list__inner {
   display: flex;
   align-items: center;
 }
 
-.menu__item:not(:last-of-type) {
+.menu-list__item:not(:last-of-type) {
   margin-right: 6px;
 }
 
-.menu__link {
+.menu-list__link {
   padding: 12px;
   font-weight: 500;
   line-height: 20px;
@@ -110,7 +119,7 @@ a {
   transition: all .2s linear;
 }
 
-.menu__link:hover {
+.menu-list__link:hover {
   opacity: 1;
 }
 
@@ -147,6 +156,20 @@ a {
   margin: 24px auto;
 }
 
+.btn {
+  padding: 16px 20px;
+  background-color: #532C59;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 /* section hero */
 .hero {
   position: relative;
@@ -179,21 +202,6 @@ a {
 
 .hero__subtitle {
   margin: 32px auto;
-}
-
-.hero__btn {
-  width: 114px;
-  height: 52px;
-  background-color: #532C59;
-  border-radius: 15px;
-  border: none;
-  outline: none;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  cursor: pointer;
 }
 
 /* section logos */
@@ -380,7 +388,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  background-color: #fcfaff;
+  background-color: #FCFAFF;
   border: 1px solid #D6BCFA;
   border-radius: 10px;
   position: absolute;
@@ -487,4 +495,60 @@ a {
 
 .item.active .item__question::after {
   transform: rotateX(-180deg) rotateY(-180deg) rotateZ(45deg);
+}
+
+/* sell */
+.sell {
+  padding: 80px 0;
+}
+
+.sell__wrapper {
+  padding: 117px 295px;
+  background: #FCFAFF;
+  border: 1px solid #D6BCFA;
+  box-shadow: inset 0px 0px 50px #F8E0FA;
+  border-radius: 60px;
+  background-image: 
+    url('../img/crystalAndCone.png'),
+    url('../img/semicircleAndSpring.png');
+  background-repeat: no-repeat;
+  background-position: 
+    left 0,
+    right 0;
+}
+
+.sell__title {
+  text-transform: none;
+}
+
+.sell__subtitle {
+  margin: 16px auto 32px;
+}
+
+/* footer */
+.footer {
+  padding: 80px 0 40px;
+}
+
+/* стили для логотипа в footer */
+.footer__logo {
+  top: -25%;
+}
+/* остальные стили берутся из блока header */
+
+.footer__menu::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #CCD5DF;
+  margin: 40px auto;
+}
+
+.copyright {
+  font-weight: 300;
+font-size: 14px;
+line-height: 20px;
+color: #000000;
+opacity: 0.5;
 }
