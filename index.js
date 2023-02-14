@@ -1,4 +1,42 @@
-/* FAQ */
+/* фиксированный хедер */
+let header = document.querySelector('.header');
+let headerInner = header.querySelector('.header__menu');
+
+window.addEventListener('scroll', () => {
+  if(window.pageYOffset >= 560) {
+    header.style.position = 'fixed';
+    header.style.animationName = 'headerOn';
+    headerInner.style.borderRadius = '0 0 10px 10px';
+    document.querySelector('main').style.paddingTop = header.offsetHeight + 'px';
+  } else if(window.pageYOffset > 450 && window.pageYOffset < 560) {
+    header.style.animationName = 'headerOff';
+  } else {
+    header.style.position = 'relative';
+    header.style.animationName = '';
+    document.querySelector('main').style.paddingTop = '';
+  }
+})
+
+/* выпадающий список в блоке header */
+let dropDownList = document.querySelector('.link_drop-down-list')
+
+dropDownList.addEventListener('click', (e) => {
+  e.preventDefault();
+  dropDownList.classList.toggle('active');
+})
+
+
+/* бургер меню */
+let burgerWrap = document.querySelector('.burger__wrapper');
+let burgerMenu = document.querySelector('.burger-menu');
+
+burgerWrap.addEventListener('click', () => {
+  dropDownList.classList.remove('active');
+  burgerWrap.classList.toggle('active');
+})
+
+
+/* FAQ - акардеон  */
 let items = document.querySelectorAll('.item');
 
 for (const item of items) {

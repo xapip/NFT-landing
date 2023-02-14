@@ -48,19 +48,103 @@ a {
 
 /* header */
 .header {
-  background-color: #ffffff;
-  border-bottom: 1px solid rgba(227, 108, 230, .4);
-  box-shadow: 0 1px 2px rgba(227, 108, 230, .3);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  animation-duration: .8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+/* показать header при скроле вниз */
+@keyframes headerOn{
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-77px,0);
+    -ms-transform: translate3d(0,-77px,0);
+    transform: translate3d(0,-77px,0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0.1px,0);
+    -ms-transform: translate3d(0,0.1px,0);
+    transform: translate3d(0,0.1px,0);
+  }
+}
+/* убрать header  */
+@keyframes headerOff{
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0.1px,0);
+    -ms-transform: translate3d(0,0.1px,0);
+    transform: translate3d(0,0.1px,0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-77px,0);
+    -ms-transform: translate3d(0,-77px,0);
+    transform: translate3d(0,-77px,0);
+  }
 }
 
 .header__menu {
-  padding: 26px 0;
-}
-
-.header_bottom-border {
+  padding: 26px 70px;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(227, 108, 230, .4);
   box-shadow: 0 1px 2px rgba(227, 108, 230, .3);
+}
+
+.burger__wrapper {
+  max-width: 30px;
+  margin-left: 10px;
+  padding: 9px 0;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.burger-menu {
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+  position: relative;
+  border-radius: 20px;
+  transition: transform .3s ease-in-out;
+}
+
+.burger__wrapper::before,
+.burger__wrapper::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+  position: absolute;
+  left: 0;
+  border-radius: 20px;
+  transition: all .5s ease-in-out;
+}
+
+.burger__wrapper::before {
+  top: 0;
+  transition: transform .3s ease-in-out;
+}
+
+.burger__wrapper::after {
+  bottom: 0px;
+  transition: all .5s ease-in-out;
+}
+
+.burger__wrapper.active .burger-menu {
+  transform: rotate(-45deg);
+}
+
+.burger__wrapper.active::before {
+  transform: rotate(45deg) translate3d(6.5px, 6.5px, 0);
+}
+
+.burger__wrapper.active::after {
+  height: 0;
+  transform: translateY(100vh);
 }
 
 /* общие стили для логотипа в header и footer */
@@ -71,8 +155,15 @@ a {
   align-items: center;
 }
 
+.svg-logo-shadow {
+  width: 40px; 
+  height: 40px;
+}
+
 .logo__text {
   margin-left: 5px;
+  width: 107px; 
+  height: 17px;
 }
 
 /* стили для логотипа в header */
@@ -111,7 +202,7 @@ a {
 }
 
 .menu-list__link {
-  padding: 12px;
+  padding: 10px;
   font-weight: 500;
   line-height: 20px;
   color: #000000;
@@ -133,12 +224,36 @@ a {
   display: inline-block;
   position: absolute;
   right: -4px;
-  top: 17px;
+  top: 18px;
   width: 5px;
   height: 5px;
   border-bottom: 2px solid #4B5567;
   border-right: 2px solid #4B5567;
   transform: rotate(45deg);
+  transition: transform .3s linear;
+}
+
+.drop-down-list__wrapper {
+  position: absolute;
+  top: -70px;
+  z-index: -1;
+  background-color: #FFFFFF;
+  border-radius: 0 0 10px 10px;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(227, 108, 230, .3);
+  transition: all .3s ease-in-out;
+}
+
+.drop-down-list__item {
+  padding: 12px 0;
+}
+
+.link_drop-down-list.active::after {
+  transform: rotate(-135deg);
+}
+
+.link_drop-down-list.active + .drop-down-list__wrapper {
+  top: 70px;
 }
 
 /* main */
@@ -183,7 +298,7 @@ a {
 
 .hero_bg {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
   height: 499px;
   left: 0px;
@@ -292,7 +407,7 @@ a {
 .collections__card-item .wrapper-image img {
   border-radius: 30px;
   position: relative;
-  z-index: -1;
+  z-index: -2;
 }
 
 .collections__card-item .card-item__title {
@@ -392,7 +507,7 @@ a {
   border: 1px solid #D6BCFA;
   border-radius: 10px;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
 }
 
 .card__profile {
@@ -530,7 +645,7 @@ a {
   padding: 80px 0 40px;
 }
 
-/* стили для логотипа в footer */
+/* стили для логотипа, расположенного в footer */
 .footer__logo {
   top: -25%;
 }
