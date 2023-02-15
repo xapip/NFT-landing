@@ -42,7 +42,7 @@ a {
 /* container */
 .container {
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 80px 70px;
   max-width: 1440px;
 }
 
@@ -257,6 +257,11 @@ a {
 }
 
 /* main */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
@@ -287,12 +292,12 @@ a {
 
 /* section hero */
 .hero {
+  order: 0;
   position: relative;
   max-width: 1500px;
-  margin: 0 auto;
 }
 .hero__inner {
-  padding: 110px 0;
+  padding: 37px 0 30px;
   position: relative;
 }
 
@@ -319,31 +324,34 @@ a {
   margin: 32px auto;
 }
 
-/* section logos */
+/* section partners */
 .partners {
-  padding: 40px 0;
+  order: 1;
   opacity: 0.8;
 }
 
+.partners .container {
+padding: 40px 70px;
+}
+
 .partners__inner {
-  padding: 0 100px;
   display: flex;
-  justify-content: space-between;
-  column-gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .partners__inner img {
   max-width: 150px;
-  height: auto;
 }
 
-/* section OurTeam */
+/* section Our Team */
 .team {
-  padding: 80px 0;
+  order: 2;
 }
 
 .team__subtitle {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .team__card {
@@ -378,7 +386,7 @@ a {
 
 /* section Hottest Collectionsl */
 .collections {
-  padding: 80px 0;
+  order: 3;
 }
 
 .collections__subtitle {
@@ -425,6 +433,7 @@ a {
 
 /* section we-provide */
 .provide {
+  order: 4;
   padding: 80px 0 104px;
 }
 
@@ -476,6 +485,7 @@ a {
 
 /* testimonials */
 .testimonials {
+  order: 5;
   padding-top: 80px;
 }
 .testimonials__title {
@@ -537,6 +547,7 @@ a {
 
 /* FAQ */
 .FAQ {
+  order: 6;
   padding: 80px 0 35px;
 }
 
@@ -614,6 +625,7 @@ a {
 
 /* sell */
 .sell {
+  order: 7;
   padding: 80px 0;
 }
 

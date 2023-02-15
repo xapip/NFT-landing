@@ -8,10 +8,12 @@
   }
 }
 
+
+
 @media (max-width: 950px) {
   /* container */
   .container {
-    padding: 0 32px;
+    padding: 64px 32px;
   }
 
   /* header */
@@ -113,6 +115,12 @@
   .drop-down-list__item:last-of-type {
     padding: 6px 0 0;
   }
+
+  /* main */
+  /* hero */
+  .hero__inner {
+    padding: 0;
+  }
 }
 
 
@@ -133,6 +141,66 @@
     font-size: 72px;
     line-height: 88px;
   }
+
+  /* partners */
+  .partners .container {
+    padding: 32px;
+  }
+
+  .partners__inner {
+    gap: 24px;
+    max-width: 455px;
+    margin: 0 auto;
+  }
+
+  .partners__inner img {
+    max-width: 135px;
+  }
+
+  /* section Our Team */
+  .team {
+    order: 3;
+  }
+
+  .team__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .team__card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .card-item__title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  /* section Hottest Collectionsl */
+  .collections {
+    order: 2;
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  /* main */
+  /* partners */
+  .partners .container {
+    padding: 32px 16px;
+  }
+
+  .partners__inner {
+    gap: 16px;
+    max-width: 288px;
+  }
+
+  .partners__inner img {
+    max-width: 85px;
+  }
 }
 
 
@@ -140,14 +208,14 @@
 @media (max-width: 500px) {
   /* container */
   .container {
-    padding: 0 16px;
+    padding: 48px 16px;
   }
 
   /* header */
   .header__menu {
     padding: 14px 16px;
   }
-  
+
   .burger__wrapper {
     padding: 7px 0;
   }
@@ -202,5 +270,11 @@
   .hero__subtitle {
     font-size: 16px;
     font-weight: 24px;
+  }
+
+  /* section Our Team */
+  .card-item__title {
+    font-size: 20px;
+    line-height: 26px;
   }
 }

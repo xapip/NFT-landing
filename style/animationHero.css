@@ -76,3 +76,138 @@
     background-position: right 31px  bottom -20px;
   }
 }
+
+
+/* adaptive */
+@media (max-width: 950px) {
+  .semicircle {
+    background-size: 173px;
+  }
+  
+  @keyframes semicircle {
+    from{
+      background-position: left -50px top 5px;
+    }
+    50%, 55%{
+      background-position: left -50px top 30px;
+    }
+    95%, to{
+      background-position: left -50px top 5px;
+    }
+  }
+  
+  .cone {
+    background-size: 111px;
+  }
+  
+  @keyframes cone {
+    from{
+      background-position: right -30px top 45px;
+    }
+    50%, 55%{
+      background-position: right -30px top 35px;
+    }
+    95%, to{
+      background-position: right -30px top 45px;
+    }
+  }
+  
+  .spring {
+    background-size: 193px;
+  }
+  
+  @keyframes spring {
+    from{
+      background-position: left -30px bottom -25px;
+    }
+    50%, 55%{
+      background-position: left -30px bottom -15px;
+    }
+    95%, to{
+      background-position: left -30px bottom -25px;
+    }
+  }
+
+  .crystal {
+    background-size: 154px;
+  }
+
+  @keyframes crystal {
+    from{
+      background-position: right -80px  bottom -15px;
+    }
+    50%, 55%{
+      background-position: right -80px  bottom 10px;
+    }
+    95%, to{
+      background-position: right -80px  bottom -15px;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .semicircle {
+    background-size: 114px;
+  }
+  
+  @keyframes semicircle {
+    from{
+      background-position: left -55px top 115px;
+    }
+    50%, 55%{
+      background-position: left -55px top 140px;
+    }
+    95%, to{
+      background-position: left -55px top 115px;
+    }
+  }
+  
+  .cone {
+    background-size: 52px;
+  }
+  
+  @keyframes cone {
+    from{
+      background-position: right 0px top 0px;
+    }
+    50%, 55%{
+      background-position: right 0px top 15px;
+    }
+    95%, to{
+      background-position: right 0px top 0px;
+    }
+  }
+  
+  .spring {
+    background-size: 123px;
+  }
+  
+  @keyframes spring {
+    from{
+      background-position: left -40px bottom 15px;
+    }
+    50%, 55%{
+      background-position: left -40px bottom 0px;
+    }
+    95%, to{
+      background-position: left -40px bottom 15px;
+    }
+  }
+
+  .crystal {
+    background-size: 105px;
+  }
+
+  @keyframes crystal {
+    from{
+      background-position: right -50px  bottom 60px;
+    }
+    50%, 55%{
+      background-position: right -50px  bottom 35px;
+    }
+    95%, to{
+      background-position: right -50px  bottom 60px;
+    }
+  }
+}
