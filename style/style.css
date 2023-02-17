@@ -294,7 +294,6 @@ a {
 .hero {
   order: 0;
   position: relative;
-  max-width: 1500px;
 }
 .hero__inner {
   padding: 37px 0 30px;
@@ -398,6 +397,7 @@ padding: 40px 70px;
   grid-template-columns: repeat(3, 1fr);
   gap: 64px 32px;
   align-items: flex-start;
+  justify-items: center;
 }
 
 .collections__card-item {
@@ -410,12 +410,40 @@ padding: 40px 70px;
   box-shadow: inset 15px -15px 0px rgba(255, 255, 255, 0.5);
   margin-bottom: 16px;
   border-radius: 30px;
+  width: 100%;
+  height: 396px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 412px 396px;
 }
 
-.collections__card-item .wrapper-image img {
-  border-radius: 30px;
-  position: relative;
-  z-index: -2;
+.collections__card-item .wrapper-image.moonbirds {
+  background-image: url('../img/collections/moonbirds.png');
+  
+}
+.collections__card-item .wrapper-image.cloneX {
+  background-image: url('../img/collections/CloneX.png');
+}
+.collections__card-item .wrapper-image.mutantApe {
+  background-image: url('../img/collections/mutantApe.png');
+}
+.collections__card-item .wrapper-image.MOAR {
+  background-image: url('../img/collections/MOAR.png');
+}
+.collections__card-item .wrapper-image.doodles {
+  background-image: url('../img/collections/doodles.png');
+}
+.collections__card-item .wrapper-image.kiwami {
+  background-image: url('../img/collections/kiwami.png');
+}
+.collections__card-item .wrapper-image.arcadeLand {
+  background-image: url('../img/collections/arcadeLand.png');
+}
+.collections__card-item .wrapper-image.goonsOfBalatroon {
+  background-image: url('../img/collections/goonsOfBalatroon.png');
+}
+.collections__card-item .wrapper-image.metaToyDragonZ {
+  background-image: url('../img/collections/metaToyDragonZ.png');
 }
 
 .collections__card-item .card-item__title {
@@ -434,7 +462,6 @@ padding: 40px 70px;
 /* section we-provide */
 .provide {
   order: 4;
-  padding: 80px 0 104px;
 }
 
 .provide__subtitle {
@@ -443,7 +470,8 @@ padding: 40px 70px;
 
 .provide__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .provide__item {
@@ -486,19 +514,27 @@ padding: 40px 70px;
 /* testimonials */
 .testimonials {
   order: 5;
-  padding-top: 80px;
 }
+
+.testimonials .container {
+  padding: 80px 70px 0;
+}
+
 .testimonials__title {
   margin-bottom: 80px;
 }
 
 .testimonials__viewport {
   display: grid;
-  grid-template-columns: repeat(3, 412px);
+  grid-template-columns: repeat(3, minmax(200px, 412px));
   column-gap: 23px;
   height: 720px;
   overflow: hidden;
   position: relative;
+  background: linear-gradient(to bottom, #FCFAFF 0%, rgba(252, 250, 255, 0) 20% 80%,  #FCFAFF 100%);
+  box-shadow: 
+    0 15px 10px 0px #FCFAFF,
+    0 -15px 10px 0px #FCFAFF;
 }
 
 .testimonials__wrapper {
@@ -507,8 +543,7 @@ padding: 40px 70px;
 
 .card {
   padding: 24px;
-  margin-bottom: 25px;
-  width: 412px;
+  max-width: 412px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -548,7 +583,6 @@ padding: 40px 70px;
 /* FAQ */
 .FAQ {
   order: 6;
-  padding: 80px 0 35px;
 }
 
 .FAQ__wrapper {
@@ -572,11 +606,11 @@ padding: 40px 70px;
 }
 
 .items__column {
-  max-width: 412px;
+  max-width: 100%;
 }
 
 .item {
-  width: 412px;
+  max-width: 100%;
   position: relative;
   padding: 24px;
   background-color: #FFFFFF;
@@ -603,9 +637,9 @@ padding: 40px 70px;
   content: '';
   position: absolute;
   top: 33px;
-  right: 31px;
-  width: 8px;
-  height: 8px;
+  right: 9px;
+  width: 10px;
+  height: 10px;
   border-bottom: 2px solid #9F7AEA;
   border-right: 2px solid #9F7AEA;
   transform: rotate(45deg);
@@ -626,11 +660,10 @@ padding: 40px 70px;
 /* sell */
 .sell {
   order: 7;
-  padding: 80px 0;
 }
 
 .sell__wrapper {
-  padding: 117px 295px;
+  padding: 117px 190px;
   background: #FCFAFF;
   border: 1px solid #D6BCFA;
   box-shadow: inset 0px 0px 50px #F8E0FA;
@@ -640,8 +673,8 @@ padding: 40px 70px;
     url('../img/semicircleAndSpring.png');
   background-repeat: no-repeat;
   background-position: 
-    left 0,
-    right 0;
+    left -40px top -30px,
+    right -40px top -30px;
 }
 
 .sell__title {

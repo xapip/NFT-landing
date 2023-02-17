@@ -6,6 +6,16 @@
   .footer__logo {
     left: 43%;
   }
+
+  /* main */
+  /* FAQ */
+  .FAQ__items {
+    flex-direction: column;
+  }
+
+  .items__column:first-of-type .item:last-of-type {
+    margin-bottom: 24px;
+  }
 }
 
 
@@ -121,6 +131,40 @@
   .hero__inner {
     padding: 0;
   }
+
+  /* section Hottest Collectionsl */
+  .collections__card-item .card-item__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* testimonials */
+  .testimonials__viewport {
+    column-gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card__nikname {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .card__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* sell */
+  .sell__wrapper {
+    padding: 48px 190px;
+    background-size: 25%;
+    background-position: 
+    left -20px top 40px,
+    right -20px top 30px;
+  }
 }
 
 
@@ -181,6 +225,111 @@
   /* section Hottest Collectionsl */
   .collections {
     order: 2;
+  }
+
+  .collections__card {
+    gap: 48px 24px;
+  }
+
+  .collections__card-item .wrapper-image {
+    background-size: 382px 396px;
+  }
+
+  .collections__card-item:nth-of-type(n + 7) {
+    display: none;
+  }
+
+  /* section we-provide */
+  .item__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  /* testimonials */
+  .testimonials .container {
+    padding: 64px 0 0;
+  }
+
+  .testimonials__viewport {
+    column-gap: 5px;
+  }
+
+  .card__name {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .card__nikname {
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+  .card__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  /* sell */
+  .sell__wrapper {
+    padding: 48px 110px;
+  }
+
+  .sell__title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .sell__subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 16px auto 24px;
+  }
+}
+
+
+@media (max-width: 760px) {
+  /* main */
+  /* section Hottest Collectionsl */
+  .collections__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FAQ */
+  .FAQ__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .FAQ__inner-title {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .item {
+    text-align: left;
+  }
+
+  .item__question {
+    max-width: 100%;
+  }
+
+  /* sell */
+  .sell__wrapper {
+    padding: 24px 16px;
+    background-image: none;
+  }
+}
+
+
+@media (max-width: 630px) {
+  /* testimonials */
+  .testimonials__viewport {
+    grid-template-columns: repeat(3, minmax(300px, 412px));
+  }
+
+  .testimonials__wrapper {
+    left: -50%;
   }
 }
 
@@ -249,12 +398,12 @@
   /* main */
   .title {
     font-size: 36px;
-    font-weight: 48px;
+    line-height: 48px;
   }
 
   .paragraph {
     font-size: 14px;
-    font-weight: 20px;
+    line-height: 20px;
   }
 
   .btn {
@@ -269,12 +418,63 @@
 
   .hero__subtitle {
     font-size: 16px;
-    font-weight: 24px;
+    line-height: 24px;
   }
 
   /* section Our Team */
   .card-item__title {
     font-size: 20px;
     line-height: 26px;
+  }
+
+  /* section Hottest Collectionsl */
+  .collections__card {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px 0px;
+  }
+
+  .collections__card-item .wrapper-image {
+    background-size: 412px 396px;
+  }
+
+  .collections__card-item:nth-of-type(n + 4) {
+    display: none;
+  }
+
+  /* section we-provide */
+  .item__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .item__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  /* FAQ */
+  .FAQ .container {
+    padding: 48px 16px 0;
+  }
+  .FAQ__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .item__question {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .item__answer {
+    font-weight: 300;
+  }
+
+  /* sell */
+  .sell__subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 8px auto 16px;
   }
 }

@@ -3,6 +3,13 @@ let wrappers = document.querySelectorAll('.testimonials__wrapper');
 for(let wrap of wrappers) {
   let cardItems = wrap.getElementsByClassName('card');
 
+  let h = 25;
+  if(document.documentElement.clientWidth < 950) {
+    h = 16;
+  } else if(document.documentElement.clientWidth < 834) {
+    h = 5;
+  }
+
   /* setCardPosition - указание позиций для абсолютно позиционированных карточек */
   function setCardPosition(cardItems) {
     let i = -1;
@@ -11,7 +18,7 @@ for(let wrap of wrappers) {
       if(i < 0) {
         positionCard = 0;
       } else {
-        positionCard += cardItems[i].offsetHeight + 25;
+        positionCard += cardItems[i].offsetHeight + h;
       }
       item.style.top = positionCard + 'px';
       i++;
@@ -22,7 +29,7 @@ for(let wrap of wrappers) {
   function cardMovement() {
     setCardPosition(cardItems)
 
-    let height = cardItems[0].offsetHeight + 25;
+    let height = cardItems[0].offsetHeight + h;
 
     for (const item of cardItems) {
       item.style.top = item.offsetTop - height + 'px';
@@ -35,11 +42,11 @@ for(let wrap of wrappers) {
     setTimeout(() => {
       firstItem.remove();
       for (let i = 0; i < cardItems.length; i++) {
-        heightCards += cardItems[i].offsetHeight + 25
+        heightCards += cardItems[i].offsetHeight + h;
       }
       firstItem.style.top = heightCards + 'px';
       wrap.appendChild(firstItem);
-    }, (timeToScrolling * 1000 - 100));
+    }, (timeToScrolling * 1000));
   }
   
   let timeToScrolling = 10; // время в секундах за которое проходит анимация и отрабатываю setInterval и setTimeout
