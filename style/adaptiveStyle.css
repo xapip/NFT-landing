@@ -1,3 +1,6 @@
+/*------------------------*\ 
+      width - 1100 PX
+\*------------------------*/
 @media (max-width: 1100px) {
   /* header */
   .header__logo {
@@ -19,7 +22,9 @@
 }
 
 
-
+/*------------------------*\ 
+      width - 950 PX
+\*------------------------*/
 @media (max-width: 950px) {
   /* container */
   .container {
@@ -46,8 +51,9 @@
 
   .header__menu .menu-list {
     display: block;
-    overflow: hidden;
+    overflow-y: scroll;
     width: 100%;
+    /* min-height: 0; */
     height: 0;
     padding: 0;
     position: absolute;
@@ -59,7 +65,12 @@
     transition: all .5s ease-in-out;
   }
 
+  .header__menu .menu-list__wrapper {
+    display: block;
+  }
+
   .header__menu .burger__wrapper.active ~ .menu-list {
+    /* min-height: 530px; */
     height: 100vh;
     padding: 20px 0 15px;
 
@@ -77,6 +88,10 @@
   .header__menu .menu-list__item:not(:last-of-type) {
     margin-bottom: 5px;
     margin-right: 0;
+  }
+
+  .header__menu .menu-list__wrapper>li:last-of-type .menu-list__item:last-of-type {
+    padding: 6px 0 40px;
   }
 
   .header__menu .menu-list__item .menu-list__link{
@@ -165,10 +180,41 @@
     left -20px top 40px,
     right -20px top 30px;
   }
+
+
+  /* footer */
+  .footer .container {
+    padding: 64px 32px 32px;
+  }
+
+  .footer__menu {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .footer__menu::after {
+    grid-column: span 2;
+  }
+
+  .footer__menu .menu-list {
+    align-self: center;
+  }
+
+  .footer__menu .menu-list__wrapper {
+    justify-content: flex-end;
+
+  }
+
+  .footer__logo {
+    position: static;
+    justify-self: center;
+  }
 }
 
 
-
+/*------------------------*\ 
+      width - 834 PX
+\*------------------------*/
 @media (max-width: 834px) {
   /* main */
   .title {
@@ -252,6 +298,7 @@
 
   .testimonials__viewport {
     column-gap: 5px;
+    grid-template-columns: repeat(3, minmax(200px, 412px));
   }
 
   .card__name {
@@ -284,9 +331,44 @@
     line-height: 18px;
     margin: 16px auto 24px;
   }
+
+
+  /* footer */
+  .footer__menu {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__menu .menu-list {
+    grid-row: 2;
+  }
+
+  .footer__menu .menu-list::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #CCD5DF;
+    margin: 40px auto;
+  }
+
+  .footer__menu .menu-list::before,
+  .footer__menu::after {
+    margin: 30px auto;
+  }
+
+  .footer__menu .menu-list__wrapper {
+    justify-content: space-evenly;
+  }
+
+  .footer__menu .menu-list__inner {
+    flex-direction: column;
+    row-gap: 24px;
+  }
 }
 
-
+/*------------------------*\ 
+      width - 760 PX
+\*------------------------*/
 @media (max-width: 760px) {
   /* main */
   /* section Hottest Collectionsl */
@@ -322,19 +404,25 @@
 }
 
 
+
+/*------------------------*\ 
+      width - 630 PX
+\*------------------------*/
 @media (max-width: 630px) {
   /* testimonials */
   .testimonials__viewport {
-    grid-template-columns: repeat(3, minmax(300px, 412px));
+    grid-template-columns: repeat(3, minmax(250px, 412px));
   }
 
   .testimonials__wrapper {
-    left: -50%;
+    left: -40%;
   }
 }
 
 
-
+/*------------------------*\ 
+      width - 540 PX
+\*------------------------*/
 @media (max-width: 540px) {
   /* main */
   /* partners */
@@ -350,10 +438,17 @@
   .partners__inner img {
     max-width: 85px;
   }
+
+  /* testimonials */
+  .testimonials__wrapper {
+    left: -50%;
+  }
 }
 
 
-
+/*------------------------*\ 
+      width - 500 PX
+\*------------------------*/
 @media (max-width: 500px) {
   /* container */
   .container {
@@ -452,6 +547,15 @@
     line-height: 18px;
   }
 
+  /* testimonials */
+  .testimonials__viewport {
+    grid-template-columns: repeat(3, minmax(250px, 412px));
+  }
+
+  .testimonials__wrapper {
+    left: -70%;
+  }
+
   /* FAQ */
   .FAQ .container {
     padding: 48px 16px 0;
@@ -476,5 +580,25 @@
     font-size: 12px;
     line-height: 18px;
     margin: 8px auto 16px;
+  }
+
+
+  /* footer */
+  .footer .container {
+    padding: 48px 16px 32px;
+  }
+}
+
+
+
+@media (max-width: 425px) {
+  /* main */
+  /* testimonials */
+  .testimonials__viewport {
+    grid-template-columns: repeat(3, minmax(200px, 412px));
+  }
+
+  .testimonials__wrapper {
+    left: -80%;
   }
 }

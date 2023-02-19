@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
 }
 
 body,
@@ -186,7 +187,7 @@ a {
   position: relative;
 }
 
-.menu-list {
+.menu-list__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -686,13 +687,13 @@ padding: 40px 70px;
 }
 
 /* footer */
-.footer {
-  padding: 80px 0 40px;
+.footer .container {
+  padding: 80px 70px 40px;
 }
 
 /* стили для логотипа, расположенного в footer */
 .footer__logo {
-  top: -25%;
+  top: -13%;
 }
 /* остальные стили берутся из блока header */
 
@@ -707,8 +708,8 @@ padding: 40px 70px;
 
 .copyright {
   font-weight: 300;
-font-size: 14px;
-line-height: 20px;
-color: #000000;
-opacity: 0.5;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.5;
 }

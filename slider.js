@@ -2,11 +2,12 @@ let wrappers = document.querySelectorAll('.testimonials__wrapper');
 
 for(let wrap of wrappers) {
   let cardItems = wrap.getElementsByClassName('card');
+  let widthWindow = document.documentElement.clientWidth;
 
   let h = 25;
-  if(document.documentElement.clientWidth < 950) {
+  if(widthWindow <= 950 && widthWindow > 834) {
     h = 16;
-  } else if(document.documentElement.clientWidth < 834) {
+  } else if(widthWindow <= 834) {
     h = 5;
   }
 
@@ -39,13 +40,14 @@ for(let wrap of wrappers) {
     let firstItem = cardItems[0];
     let heightCards = 0;
 
-    setTimeout(() => {
+    interval = setTimeout(() => {
       firstItem.remove();
       for (let i = 0; i < cardItems.length; i++) {
         heightCards += cardItems[i].offsetHeight + h;
       }
       firstItem.style.top = heightCards + 'px';
       wrap.appendChild(firstItem);
+      cardMovement();
     }, (timeToScrolling * 1000));
   }
   
@@ -54,21 +56,20 @@ for(let wrap of wrappers) {
   let toggle = true; // вспомогательная переменная для обработчиков события, распаложенных ниже.
 
   /* первичный запуск слайдера */
+  let interval;
   cardMovement();
-  let interval = setInterval(cardMovement, (timeToScrolling * 1000));
 
   /* остановка слайдера при потере window фокуса и запуск при получении */
   window.addEventListener('blur', () => {
     if(toggle) {
       clearInterval(interval);
       toggle = false;
-      interval = null;
+      // interval = null;
     }
   });
   window.addEventListener('focus', () => {
     if(!toggle) {
       cardMovement();
-      interval = setInterval(cardMovement, (timeToScrolling * 1000));
       toggle = true;
     }
   });

@@ -33,6 +33,11 @@ let burgerMenu = document.querySelector('.burger-menu');
 burgerWrap.addEventListener('click', () => {
   dropDownList.classList.remove('active');
   burgerWrap.classList.toggle('active');
+  if(burgerWrap.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 })
 
 
