@@ -53,24 +53,5 @@ for(let wrap of wrappers) {
   
   let timeToScrolling = 10; // время в секундах за которое проходит анимация и отрабатываю setInterval и setTimeout
   
-  let toggle = true; // вспомогательная переменная для обработчиков события, распаложенных ниже.
-
-  /* первичный запуск слайдера */
-  let interval;
   cardMovement();
-
-  /* остановка слайдера при потере window фокуса и запуск при получении */
-  window.addEventListener('blur', () => {
-    if(toggle) {
-      clearInterval(interval);
-      toggle = false;
-      // interval = null;
-    }
-  });
-  window.addEventListener('focus', () => {
-    if(!toggle) {
-      cardMovement();
-      toggle = true;
-    }
-  });
 }
