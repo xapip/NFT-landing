@@ -1,3 +1,7 @@
+.hero_bg-shapes {
+  will-change: animation;
+}
+
 .shapes {
   position: absolute;
   width: 100%;

@@ -51,7 +51,7 @@ for(let wrap of wrappers) {
     }, (timeToScrolling * 1000));
   }
   
-  let timeToScrolling = 10; // время в секундах за которое проходит анимация и отрабатываю setInterval и setTimeout
+  let timeToScrolling = 10; // время в секундах за которое проходит анимация и отрабатывает setTimeout
   
   cardMovement();
 }
